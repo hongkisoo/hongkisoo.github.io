@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지 프로젝트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <style>
+        /* #home{
+        background-image: url(image/home.png);
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0% 0%;
+        float: left;
+        margin-top: -291px;
+        margin-left: -282px;
+        opacity: 0.1;
+        } */
+        body{
+            
+            padding: 35%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('image/back1.jpg');
+            /* opacity: 0.5; */
+        }
+        .text{
+            font-family: 'Ranchers', cursive;
+            padding: 30px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: -100%;
+        }
+        #ko{
+            /* opacity: 0.5; */
+          font-size: 40px;
+          text-align: center;
+        }
+        .prod-list {
+      list-style:none;
+      margin:0;
+      padding:0;
+     }
+    .prod-list li {
+      position: relative; 
+      float: left;
+      padding: 0;
+      margin: 10px;
+      overflow: hidden;
+    }
+    .prod-list img {
+      margin:0;
+      padding:0;
+      float:left;
+      z-index:5;
+      width:400px;
+      height:340px;
+    } 
+    .prod-list .caption{
+      position:absolute;
+      top:220px;
+      width:400px;
+      height:320px;
+      padding-top: 20px;
+      text-align:center;
+      color:white;
+      opacity:0;
+      background:rgba(0,0,0,.5);
+      transition: .5s;
+    }
+    .prod-list li:hover .caption{
+       opacity:1;
+      transform: translateY(-220px);
+    }
+    .caption h1{
+        font-family: 'Ranchers', cursive;
+    }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <a id="home" href="index.html"></a>
+    </div> -->
+    <h1 class="text">가고싶은 여행지</h1>
+    <div >
+        <hr>
+         <!-- <p id="ko">국내 여행지</p> -->
+         <ul class="prod-list">
+            <li>
+              <img src="image/ital.jpg">
+              <div class="caption">
+                <h1>피렌체</h1>
+                <br>
+                <p>이탈리아 르네상스 문화의 흔적이 잘 남아있는 도시</p>
+                <p>천천히 도보로 여행하기에 좋은 도시</p>
+                <p>유럽에서 네 번째로 큰 성당 두오모가 대표적인 건축물</p>
+              </div>
+            </li>
+            <li>
+              <img src="image/mong.jpg">
+              <div class="caption">
+                <h1>몽 셀 미셸</h1>
+                <br>
+                <p>프랑스 북부 브레타뉴와 노르망디의 자리한 섬</p>
+                <p>조수간만에 의해 육지와 연결되기도 한다</p>
+                <p>바다 위에 떠 있는 기묘한 성이 아름답다</p>
+              </div>
+            </li>
+            
+            <!-- <p id="ko">국내 여행지</p> -->
+            <li>
+                <img src="image/travel.jpg">
+                <div class="caption">
+                    <h1>거제도</h1>
+                    <br>
+                    <p>국내 여행지로 요즘 더욱 각광받고 있는 거제도</p>
+                    <p>시원한 바다와 섬,아쿠아리움 볼거리까지 가득</p>
+                    <p>더운 여름휴가지로 특히 좋은 곳이다.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    
+</body>
+</html>

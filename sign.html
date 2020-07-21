@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지 프로젝트</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <style>
+        body{
+            background-image: url('image/back.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        table#table{
+            text-align: center;
+            border-spacing: 8px;
+        }
+ 
+        #submit{
+            border-radius: 20px;
+        }
+        .join{
+            width: 30%;
+            height: 400px;
+            margin: auto;
+            background-color: rgb(233, 222, 222);
+            border-radius: 20px;
+        }
+    </style>
+    <br><br><br><br>
+</head>
+<body>
+    <form action="javascript:alert('가입 완료!');" onsubmit="return validate();">
+        <div class="join">
+            <table id="table">
+                <tr>
+                    <th>이름 :</th>
+                    <td>
+                        <input type="text" name="textname"" id="textname" placeholder="한글만 입력하세요">
+                    </td>
+                </tr>
+                <tr>
+                    <th>아이디 :</th>
+                    <td><input type="text" id="textId"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 :</th>
+                    <td><input type="password" id="textpw"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인 :</th>
+                    <td><input type="password" name="textpwck" id="textpwck"></td>
+                </tr>
+                <tr>
+                    <th>이메일 :</th>
+                    <td><input type="emai" name="emai" id="emai" placeholder="answer@naver.com" required></td>
+                </tr>
+                <tr>
+                    <th>메모 :</th>
+                    <td><textarea name="textarea" id="textarea" cols="23" rows="8"></textarea>
+                    <p><span id="num">0</span>/25</p></td>
+                </tr>
+                <td colspan="4" class="button">
+                    <input type="submit" id="submit" value="회원가입" >&nbsp;
+                </td>
+            </table>
+        </div>
+    </form>
+    <script>
+        $("form").submit(function(e){
+            
+            var textlen = $("#textarea").val().length;
+            var key = $("#textId").val();
+            var value = $("#textpw").val();
+                    
+            if(textlen == 0 || textlen >25){
+                e.preventDefault();              
+        }
+            if(key == '' || value =='') {
+                alert("공백이 존재합니다."); 
+                return;
+        }
+            localStorage.setItem(key, value);
+        });
+        $("#textarea").keyup(function(){
+            var max = 25;
+            var textlen = $(this).val().length;
+            var num = $("#num")
+            num.html(textlen);
+            
+            if(textlen > max)
+            num.css("color","red")
+            else
+            num.css("color","initial")
+        });
+        
+        
+        
+
+    </script>
+    
+</body>
+</html>
